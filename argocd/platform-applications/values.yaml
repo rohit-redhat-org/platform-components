@@ -3,7 +3,7 @@ clusterRouterDomain: example.cluster.com
 
 gitHost: https://github.com
 gitOrg: rohit-redhat-org
-gitRef: main
+gitRef: devspaces
 gitToken: ghp_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 authClientSecret: replaceme
