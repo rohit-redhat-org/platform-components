@@ -9,3 +9,4 @@ resources:
   - keycloak
   - microcks
   - openshift-pipelines
+  - devspaces
