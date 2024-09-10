@@ -13,7 +13,7 @@ spec:
     targetRevision: "{{ .Values.gitRef }}"
   destination:
     server: https://kubernetes.default.svc
-    namespace: devspaces
+    namespace: openshift-devspaces
   syncPolicy:
     automated: 
       prune: true
