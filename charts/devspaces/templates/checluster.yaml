@@ -10,6 +10,8 @@ spec:
       logLevel: INFO
     dashboard:
       logLevel: ERROR
+    devWorkspace: {}
+    devfilRegistry: {}
     metrics:
       enable: true
   containerRegistry: {}
