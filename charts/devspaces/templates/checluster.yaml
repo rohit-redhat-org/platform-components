@@ -11,26 +11,34 @@ spec:
     dashboard:
       logLevel: ERROR
     devWorkspace: {}
-    devfilRegistry: {}
+    devfileRegistry: {}
+    imagePuller:
+      enable: false
+      spec: {}
     metrics:
       enable: true
+    pluginRegistry: {}
   containerRegistry: {}
   devEnvironments:
-    startTimeoutSeconds: 300
-    secondsOfRunBeforeIdling: -1
-    maxNumberOfWorkspacesPerUser: -1
     containerBuildConfiguration:
       openShiftSecurityContextConstraint: container-build
     defaultNamespace:
       autoProvision: true
       template: <username>-devspaces
+    maxNumberOfWorkspacesPerUser: -1
     secondsOfInactivityBeforeIdling: 1800
+    secondsOfRunBeforeIdling: -1
+    security: {}
+    startTimeoutSeconds: 300
     storage:
       pvcStrategy: per-user
   gitServices: {}
   networking:
     auth:
       gateway:
+        configLabels:
+          app: che
+          component: che-gateway-config
         kubeRbacProxy:
           logLevel: 0
         oAuthProxy:
