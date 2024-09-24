@@ -4,7 +4,7 @@ metadata:
   name: devspaces
   namespace: openshift-gitops
   annotations:
-    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   project: default
   source:
