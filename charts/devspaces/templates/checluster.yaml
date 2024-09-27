@@ -3,8 +3,14 @@ kind: CheCluster
 metadata:
   name: devspaces
   namespace: openshift-devspaces
-  # annotations:
-  #   argocd.argoproj.io/hook: PostSync
+  finalizers:
+    - checluster.che.eclipse.org
+    - cluster-resources.finalizers.che.eclipse.org
+    - cheGateway.clusterpermissions.finalizers.che.eclipse.org
+    - oauthclients.finalizers.che.eclipse.org
+    - dashboard.clusterpermissions.finalizers.che.eclipse.org
+  annotations:
+    che.eclipse.org/checluster-defaults-cleanup: '{"containers.resources":"true","spec.components.dashboard.headerMessage":"true","spec.components.pluginRegistry.openVSXURL":"true","spec.devEnvironments.defaultComponents":"true","spec.devEnvironments.defaultEditor":"true","spec.devEnvironments.disableContainerBuildCapabilities":"true"}'
 spec:
   components:
     cheServer:
